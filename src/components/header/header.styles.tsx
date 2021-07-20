@@ -2,16 +2,15 @@ import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 
 export const HeaderContainer = styled.div`
-  margin: 24px 72px 0;
+  margin-top: 24px;
   height: 76px;
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
-`;
 
-export const LogoContainer = styled(Link)`
-  float: left;
-  text-decoration: none;
+  .logo {
+    padding-left: 32px;
+  }
 `;
 
 export const OptionsContainer = styled.div`
