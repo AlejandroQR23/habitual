@@ -8,9 +8,7 @@ export const GlobalStyle = createGlobalStyle`
 
   body {
     font-family: 'Lato', sans-serif;
-    width: 100%;
-    margin: 0 auto;
-    max-width: 1080px;
+    
 
     @media screen and (max-width: 900px) {
       text-align: center;
