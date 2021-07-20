@@ -1,7 +1,9 @@
 import { Route, Switch } from 'react-router-dom';
+import Footer from './components/footer/footer.component';
 import Header from './components/header/header.component';
 import HomePage from './pages/hompage/homepage.component';
 import { GlobalStyle } from './styles/global.styles';
+import { PageContent } from './styles/page.styles';
 
 function App() {
   return (
@@ -9,8 +11,11 @@ function App() {
       <GlobalStyle />
       <Header />
       <Switch>
-        <Route exact path="/" component={HomePage} />
+        <PageContent>
+          <Route exact path="/" component={HomePage} />
+        </PageContent>
       </Switch>
+      <Footer />
     </div>
   );
 }
