@@ -1,12 +1,17 @@
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 
-export const HeaderContainer = styled.div`
-  margin-top: 24px;
-  height: 76px;
+export const HeaderContainer = styled.header`
+  height: 80px;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
+  background-color: #ffffff;
+
+  position: fixed;
+  width: 100%;
+  z-index: 99;
+  top: 0;
 
   .logo {
     padding-left: 32px;
