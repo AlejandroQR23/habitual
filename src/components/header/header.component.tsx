@@ -9,8 +9,8 @@ const Header = () => (
     </Link>
     <OptionsContainer>
       <OptionLink to="/shop">Shop</OptionLink>
-      <OptionLink to="/shop">About</OptionLink>
-      <OptionLink to="/shop">Sign In</OptionLink>
+      <OptionLink to="/about">About</OptionLink>
+      <OptionLink to="/signin">Sign In</OptionLink>
     </OptionsContainer>
   </HeaderContainer>
 );
