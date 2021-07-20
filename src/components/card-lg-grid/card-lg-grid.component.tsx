@@ -1,5 +1,5 @@
 import ProductCardLg from '../product-card-lg/product-card-lg.component';
-import { SHOP_DATA } from '../../shop-data';
+import { SHOP_DATA } from '../../utils/shop-data';
 import { CardGridContainer } from './card-lg-grid.styles';
 
 const CardLgGrid = () => {

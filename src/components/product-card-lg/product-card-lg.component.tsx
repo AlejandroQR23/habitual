@@ -1,5 +1,5 @@
 import product from '../../assets/bose-headset.png';
-import { getDiscount } from '../../shop-data';
+import { getDiscount } from '../../utils/shop-data';
 import { Pill } from '../../styles/pill.styles';
 import { CardBody, CardContainer, CardFooter, CardImg, CardPrice, CardPriceContainer } from './product-card-lg.styles';
 
