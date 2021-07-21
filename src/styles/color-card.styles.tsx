@@ -15,6 +15,20 @@ export const ColorCardContainer = styled.div`
     padding: 16px 16px 20px;
     min-height: 72px;
   }
+
+  img {
+    max-height: 96px;
+  }
+`;
+
+export const ColorCardImg = styled.div`
+  width: 100%;
+  height: 112px;
+  text-align: center;
+
+  img {
+    max-height: 96px;
+  }
 `;
 
 export const ButtonContainer = styled.div`
@@ -26,4 +40,5 @@ export const ButtonContainer = styled.div`
   background: #ffffff;
   box-shadow: 5px 5px 15px 5px rgba(0, 0, 0, 0.05);
   border-radius: 15px;
+  margin-bottom: 10px;
 `;

@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-export const ColorCardGridContainer = styled.div`
+export const CardGridContainer = styled.div`
   display: flex;
   margin-top: 48px;
 
