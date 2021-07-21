@@ -84,4 +84,18 @@ export const GlobalStyle = createGlobalStyle`
       box-shadow: 5px 5px 15px 5px rgba(0, 0, 0, 0.05);
     }
   }
+
+  /* Keyframs */
+  @keyframes slide-in-fwd-top {
+    0% {
+      -webkit-transform: translateZ(-1400px) translateY(-800px);
+      transform: translateZ(-1400px) translateY(-800px);
+      opacity: 0;
+    }
+    100% {
+      -webkit-transform: translateZ(0) translateY(0);
+      transform: translateZ(0) translateY(0);
+      opacity: 1;
+    }
+  }
 `;
