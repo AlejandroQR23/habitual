@@ -1,14 +1,14 @@
 import { colorCards } from '../../utils/cards';
 import ColorCard from '../color-card/color-card.component';
-import { ColorCardGridContainer } from './color-card-grid.styles';
+import { CardGridContainer } from '../../styles/card-grid.styles';
 
 const ColorCardGrid = () => {
   return (
-    <ColorCardGridContainer>
+    <CardGridContainer>
       {colorCards.map((item, index) => (
         <ColorCard key={index} text={item.text} color={item.color} />
       ))}
-    </ColorCardGridContainer>
+    </CardGridContainer>
   );
 };
 

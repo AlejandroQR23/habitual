@@ -1,4 +1,4 @@
-import { ButtonContainer, ColorCardContainer } from './color-card.styles';
+import { ButtonContainer, ColorCardContainer } from '../../styles/color-card.styles';
 import { ReactComponent as RightArrow } from '../../assets/chevron-right.svg';
 import { IColorCard } from '../../utils/cards';
 
