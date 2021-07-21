@@ -1,19 +1,19 @@
-import { ReactComponent as HeroImage } from '../../assets/loving.svg';
+import { ReactComponent as ShopImage } from '../../assets/dancing.svg';
 import { HeroContainer, HeroTextContainer } from '../../styles/hero.styles';
 
-const HomeHero = () => (
+const ShopHero = () => (
   <HeroContainer>
+    <ShopImage />
     <HeroTextContainer>
-      <h1>Find the stuff you love</h1>
+      <h1>Take a look at our categories</h1>
       <p>
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Diam, vivamus duis laoreet amet. Aliquet elementum
         ultrices molestie netus donec pellentesque quis. Aliquet elementum ultrices molestie netus donec pellentesque
         quis. Aliquet elementum ultrices molestie netus donec pellentesque quis.
       </p>
-      <button>Shop now</button>
+      <button>Improve your experience</button>
     </HeroTextContainer>
-    <HeroImage />
   </HeroContainer>
 );
 
-export default HomeHero;
+export default ShopHero;
