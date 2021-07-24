@@ -50,7 +50,8 @@ export const CardPrice = styled.div`
   flex-direction: row;
   align-items: center;
 
-  h5 {
+  h5,
+  h6 {
     padding-right: 10px;
   }
 `;
@@ -73,4 +74,32 @@ export const CardFooter = styled.div`
     line-height: 16px;
     color: #3a3a3a;
   }
+`;
+
+//Small Card
+export const CardContainerSm = styled(CardContainer)`
+  width: 156px;
+  height: 237px;
+`;
+
+export const CardBodySm = styled(CardBody)`
+  width: 100%;
+  p {
+    font-size: 16px;
+    line-height: 24px;
+  }
+`;
+
+export const CardImgSm = styled(CardImg)`
+  height: 137px;
+`;
+
+export const CardPriceSm = styled(CardPrice)`
+  h6 {
+    margin: 8px 0;
+  }
+`;
+
+export const CardFooterSm = styled(CardFooter)`
+  margin: 0;
 `;
