@@ -45,6 +45,13 @@ export const GlobalStyle = createGlobalStyle`
     line-height: 20px;
   }
 
+  h6 {
+    font-weight: 800;
+    font-size: 12px;
+    line-height: 12px;
+    color: #3A3A3A;
+  }
+
   p {
     font-style: normal;
     font-weight: normal;
