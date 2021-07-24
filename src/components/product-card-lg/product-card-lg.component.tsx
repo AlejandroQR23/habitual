@@ -1,7 +1,14 @@
 import product from '../../assets/bose-headset.png';
 import { getDiscount } from '../../utils/shop-data';
 import { Pill } from '../../styles/pill.styles';
-import { CardBody, CardContainer, CardFooter, CardImg, CardPrice, CardPriceContainer } from './product-card-lg.styles';
+import {
+  CardBody,
+  CardContainer,
+  CardFooter,
+  CardImg,
+  CardPrice,
+  CardPriceContainer,
+} from '../../styles/product-card.styles';
 
 interface ProductProps {
   name: string;
@@ -18,7 +25,7 @@ const ProductCardLg = ({ name, price, discount, category }: ProductProps) => (
       <p>{name}</p>
       <CardPriceContainer>
         <CardPrice>
-          <h5>{getDiscount(discount, price)}</h5>
+          <h5>$ {getDiscount(discount, price)}</h5>
           <span>{price}</span>
         </CardPrice>
         <Pill>{discount}% OFF</Pill>
