@@ -5,7 +5,7 @@ import { IColorCard } from '../../utils/cards';
 const ColorCard = ({ text, color }: IColorCard) => (
   <ColorCardContainer color={color}>
     <p>{text}</p>
-    <ButtonContainer>
+    <ButtonContainer to="/shop">
       <RightArrow />
     </ButtonContainer>
   </ColorCardContainer>

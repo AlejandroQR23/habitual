@@ -10,7 +10,7 @@ const CategoryCard = ({ text, color, img }: IColorCard) => (
       <ColorCardImg>
         <img src={product} alt={img} />
       </ColorCardImg>
-      <ButtonContainer>
+      <ButtonContainer to="/">
         <RightArrow />
       </ButtonContainer>
     </ColorCardContainer>

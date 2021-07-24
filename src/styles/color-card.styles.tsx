@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 
 export const ColorCardContainer = styled.div`
@@ -31,7 +32,7 @@ export const ColorCardImg = styled.div`
   }
 `;
 
-export const ButtonContainer = styled.div`
+export const ButtonContainer = styled(Link)`
   align-self: flex-end;
   padding: 8px;
   margin-right: 10px;
