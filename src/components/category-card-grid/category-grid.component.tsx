@@ -1,17 +1,17 @@
 import { categoryCards } from '../../utils/cards';
 import { CardGridContainer } from '../../styles/card-grid.styles';
 import CategoryCard from '../category-card/category-card.component';
-import { CategoryCardGridContainer } from './category-card-grid.styles';
+import { SectionContainer } from '../../styles/section-container.styles';
 
 const CategoryCardGrid = () => (
-  <CategoryCardGridContainer>
+  <SectionContainer>
     <h2>Categories</h2>
     <CardGridContainer>
       {categoryCards.map((item, index) => (
         <CategoryCard key={index} text={item.text} color={item.color} img={item.img} />
       ))}
     </CardGridContainer>
-  </CategoryCardGridContainer>
+  </SectionContainer>
 );
 
 export default CategoryCardGrid;

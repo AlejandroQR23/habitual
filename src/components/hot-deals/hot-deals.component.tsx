@@ -1,11 +1,11 @@
+import { SectionContainer } from '../../styles/section-container.styles';
 import CardLgGrid from '../card-lg-grid/card-lg-grid.component';
-import { HotDealsContainer } from './hot-deals.styles';
 
 const HotDeals = () => (
-  <HotDealsContainer>
+  <SectionContainer>
     <h2>Hot Deals</h2>
     <CardLgGrid />
-  </HotDealsContainer>
+  </SectionContainer>
 );
 
 export default HotDeals;

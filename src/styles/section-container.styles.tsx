@@ -1,5 +1,5 @@
 import styled from 'styled-components';
 
-export const CategoryCardGridContainer = styled.div`
+export const SectionContainer = styled.section`
   margin-top: 48px;
 `;
