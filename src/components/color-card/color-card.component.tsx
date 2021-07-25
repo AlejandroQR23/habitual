@@ -1,14 +1,16 @@
 import { ButtonContainer, ColorCardContainer } from '../../styles/color-card.styles';
 import { ReactComponent as RightArrow } from '../../assets/chevron-right.svg';
 import { IColorCard } from '../../utils/cards';
+import { RouteComponentProps, withRouter } from 'react-router-dom';
 
-const ColorCard = ({ text, color }: IColorCard) => (
+interface IColorCardProps extends IColorCard, RouteComponentProps {}
+const ColorCard = ({ text, color, history }: IColorCardProps) => (
   <ColorCardContainer color={color}>
     <p>{text}</p>
-    <ButtonContainer to="/shop">
+    <ButtonContainer onClick={() => history.push('/shop')}>
       <RightArrow />
     </ButtonContainer>
   </ColorCardContainer>
 );
 
-export default ColorCard;
+export default withRouter(ColorCard);
