@@ -6,7 +6,7 @@ import {
   CardPriceContainer,
   CardPriceSm,
 } from '../../styles/product-card.styles';
-import { getDiscount } from '../../utils/shop-data';
+import { getDiscount } from '../../redux/shop/shop-data';
 import product from '../../assets/bose-headset.png';
 
 interface ProductProps {

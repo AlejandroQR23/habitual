@@ -1,5 +1,5 @@
 import product from '../../assets/bose-headset.png';
-import { getDiscount } from '../../utils/shop-data';
+import { getDiscount, IProduct } from '../../redux/shop/shop-data';
 import { Pill } from '../../styles/pill.styles';
 import {
   CardBody,
@@ -10,13 +10,10 @@ import {
   CardPriceContainer,
 } from '../../styles/product-card.styles';
 
-interface ProductProps {
-  name: string;
-  price: number;
-  discount: number;
+interface IProductCardProps extends IProduct {
   category: string;
 }
-const ProductCardLg = ({ name, price, discount, category }: ProductProps) => (
+const ProductCardLg = ({ name, price, discount, category }: IProductCardProps) => (
   <CardContainer>
     <CardImg>
       <img src={product} alt="product image" />
