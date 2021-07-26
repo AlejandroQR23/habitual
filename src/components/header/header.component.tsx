@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom';
 import { ReactComponent as Logo } from '../../assets/Logo.svg';
 import { useAppSelector } from '../../redux/hooks';
-import { CartDropdownContainer } from '../cart-dropdown/cart-dropdown.styles';
+import CartDropdown from '../cart-dropdown/cart-dropdown.component';
 import CartIcon from '../cart-icon/cart-icon.component';
 import { HeaderContainer, OptionLink, OptionsContainer } from './header.styles';
 
@@ -18,7 +18,7 @@ const Header = () => {
         <OptionLink to="/signin">Sign In</OptionLink>
         <CartIcon />
       </OptionsContainer>
-      {hidden ? null : <CartDropdownContainer />}
+      {hidden ? null : <CartDropdown />}
     </HeaderContainer>
   );
 };
