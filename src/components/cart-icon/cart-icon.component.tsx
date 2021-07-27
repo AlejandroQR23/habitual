@@ -1,9 +1,10 @@
 import { ReactComponent as ShoppingIcon } from '../../assets/shopping-cart.svg';
-import { toggleCartHidden } from '../../redux/cart/cart.reducer';
-import { useAppDispatch } from '../../redux/hooks';
+import { selectCartItemsCount, toggleCartHidden } from '../../redux/cart/cart.reducer';
+import { useAppDispatch, useAppSelector } from '../../redux/hooks';
 import { CartIconContainer, ItemCount } from './cart-icon.styles';
 
 const CartIcon = () => {
+  const itemsCount = useAppSelector(selectCartItemsCount);
   const dispatch = useAppDispatch();
   return (
     <CartIconContainer
@@ -12,7 +13,7 @@ const CartIcon = () => {
       }}
     >
       <ShoppingIcon />
-      <ItemCount> 1 </ItemCount>
+      <ItemCount> {itemsCount} </ItemCount>
     </CartIconContainer>
   );
 };
