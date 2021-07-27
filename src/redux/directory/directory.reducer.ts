@@ -2,7 +2,7 @@ import { createSlice } from '@reduxjs/toolkit';
 import { RootState } from '../store';
 
 export interface ICategory {
-  id?: number;
+  id: number;
   title: string;
   color: string;
   img?: string;
@@ -29,5 +29,5 @@ export const directorySlice = createSlice({
   reducers: {},
 });
 
-export const selectDirectory = (state: RootState) => state.directory.categories;
+export const selectCategories = (state: RootState) => state.directory.categories;
 export default directorySlice.reducer;
