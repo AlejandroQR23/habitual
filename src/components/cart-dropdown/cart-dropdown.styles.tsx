@@ -14,9 +14,15 @@ export const CartDropdownContainer = styled.div`
   z-index: 5;
 
   animation: swing-in-top-fwd 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275) both;
+
+  button {
+    margin-top: auto;
+    border-radius: 0px;
+  }
 `;
 
 export const CartItemsContainer = styled.div`
+  height: 240px;
   display: flex;
   flex-direction: column;
   overflow: scroll;
