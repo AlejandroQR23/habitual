@@ -2,16 +2,19 @@ import { CardGridContainer } from '../../styles/card-grid.styles';
 import { SectionContainer } from '../../styles/section-container.styles';
 import ProductCard from '../product-card/product-card.component';
 import { useAppSelector } from '../../redux/hooks';
+import { selectDiscountShopItems } from '../../redux/shop/shop.reducer';
 
 const FlashDeals = () => {
-  const { products } = useAppSelector((state) => state.shop.categories[0]);
+  const products = useAppSelector(selectDiscountShopItems);
   return (
     <SectionContainer>
       <h2>Flash Deals</h2>
       <CardGridContainer>
-        {products.map(({ id, ...otherProductProps }) => (
-          <ProductCard key={id} {...otherProductProps} />
-        ))}
+        {products
+          .filter((_item, idx) => idx < 4)
+          .map(({ id, ...otherProductProps }) => (
+            <ProductCard key={id} {...otherProductProps} />
+          ))}
       </CardGridContainer>
     </SectionContainer>
   );
