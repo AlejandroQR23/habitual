@@ -12,8 +12,8 @@ const FlashDeals = () => {
       <CardGridContainer>
         {products
           .filter((_item, idx) => idx < 4)
-          .map(({ id, ...otherProductProps }) => (
-            <ProductCard key={id} {...otherProductProps} />
+          .map((item) => (
+            <ProductCard key={item.id} item={item} />
           ))}
       </CardGridContainer>
     </SectionContainer>

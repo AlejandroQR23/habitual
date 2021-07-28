@@ -11,8 +11,8 @@ const CardLgGrid = () => {
     <CardGridContainer>
       {products
         .filter((_item, idx) => idx < 3)
-        .map(({ id, ...otherProductsProps }) => (
-          <ProductCardLg key={id} id={id} category={title} {...otherProductsProps} />
+        .map((item) => (
+          <ProductCardLg key={item.id} item={item} category={title} />
         ))}
     </CardGridContainer>
   );
