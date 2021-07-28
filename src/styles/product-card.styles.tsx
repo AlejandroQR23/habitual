@@ -32,6 +32,10 @@ export const CardImg = styled.div`
     display: none;
 
     font-size: 10px;
+
+    svg {
+      margin-right: 4px;
+    }
   }
 
   img {
@@ -51,10 +55,6 @@ export const CardImg = styled.div`
 
       cursor: pointer;
       box-shadow: 5px 5px 15px 5px rgba(0, 0, 0, 0.05);
-
-      svg {
-        margin-right: 4px;
-      }
     }
   }
 `;
@@ -129,7 +129,7 @@ export const CardImgSm = styled(CardImg)`
   height: 137px;
 
   div {
-    right: 40px;
+    right: 35px;
   }
 `;
 
