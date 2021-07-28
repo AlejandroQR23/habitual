@@ -1,3 +1,5 @@
+import { ReactComponent as Heart } from '../../assets/heart.svg';
+
 import {
   CardBodySm,
   CardContainerSm,
@@ -18,6 +20,10 @@ const ProductCard = ({ name, price, discount }: ProductProps) => (
   <CardContainerSm>
     <CardImgSm>
       <img src={product} alt="product image" />
+      <div>
+        <Heart />
+        Add to cart
+      </div>
     </CardImgSm>
     <CardBodySm>
       <p>{name}</p>

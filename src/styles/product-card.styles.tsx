@@ -8,6 +8,7 @@ export const CardContainer = styled.div`
   padding: 0px;
   width: 285px;
   height: 312px;
+  position: relative;
 
   box-shadow: 5px 5px 15px 5px rgba(0, 0, 0, 0.05);
   border-radius: 10px;
@@ -19,8 +20,42 @@ export const CardImg = styled.div`
   text-align: center;
   background: #f8f7fa;
 
+  div {
+    height: 32px;
+    background: #ffffff;
+    border-radius: 100px;
+
+    opacity: 0.7;
+    position: absolute;
+    top: 55px;
+    right: 100px;
+    display: none;
+
+    font-size: 10px;
+  }
+
   img {
     max-height: 128px;
+  }
+
+  &:hover {
+    img {
+      opacity: 0.8;
+    }
+    div {
+      opacity: 0.85;
+      display: flex;
+      flex-direction: row;
+      align-items: flex-start;
+      padding: 8px;
+
+      cursor: pointer;
+      box-shadow: 5px 5px 15px 5px rgba(0, 0, 0, 0.05);
+
+      svg {
+        margin-right: 4px;
+      }
+    }
   }
 `;
 
@@ -92,6 +127,10 @@ export const CardBodySm = styled(CardBody)`
 
 export const CardImgSm = styled(CardImg)`
   height: 137px;
+
+  div {
+    right: 40px;
+  }
 `;
 
 export const CardPriceSm = styled(CardPrice)`

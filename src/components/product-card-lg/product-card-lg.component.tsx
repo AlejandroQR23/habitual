@@ -1,4 +1,6 @@
 import product from '../../assets/bose-headset.png';
+import { ReactComponent as Heart } from '../../assets/heart.svg';
+
 import { getDiscount, IProduct } from '../../redux/shop/shop-data';
 import { Pill } from '../../styles/pill.styles';
 import {
@@ -17,6 +19,10 @@ const ProductCardLg = ({ name, price, discount, category }: IProductCardProps) =
   <CardContainer>
     <CardImg>
       <img src={product} alt="product image" />
+      <div>
+        <Heart />
+        Add to cart
+      </div>
     </CardImg>
     <CardBody>
       <p>{name}</p>
@@ -25,7 +31,7 @@ const ProductCardLg = ({ name, price, discount, category }: IProductCardProps) =
           <h5>$ {getDiscount(discount, price)}</h5>
           <span>{price}</span>
         </CardPrice>
-        <Pill>{discount}% OFF</Pill>
+        {discount > 0 ? <Pill>{discount}% OFF</Pill> : ''}
       </CardPriceContainer>
       <p className="description">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ipsum, explicabo?</p>
       <CardFooter>
