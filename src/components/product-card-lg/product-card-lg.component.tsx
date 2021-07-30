@@ -1,5 +1,6 @@
-import product from '../../assets/bose-headset.png';
 import { ReactComponent as Heart } from '../../assets/heart.svg';
+import { addItem } from '../../redux/cart/cart.reducer';
+import { useAppDispatch } from '../../redux/hooks';
 
 import { getDiscount, IProduct } from '../../redux/shop/shop-data';
 import { Pill } from '../../styles/pill.styles';
@@ -17,12 +18,14 @@ interface IProductCardProps {
   category: string;
 }
 const ProductCardLg = ({ item, category }: IProductCardProps) => {
-  const { name, discount, price } = item;
+  const { name, img, discount, price } = item;
+  const dispatch = useAppDispatch();
+
   return (
     <CardContainer>
       <CardImg>
-        <img src={product} alt="product image" />
-        <div>
+        <img src={img} alt="product image" />
+        <div onClick={() => dispatch(addItem(item))}>
           <Heart />
           Add to cart
         </div>

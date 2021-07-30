@@ -9,15 +9,18 @@ import {
   CardPriceSm,
 } from '../../styles/product-card.styles';
 import { getDiscount, IProduct } from '../../redux/shop/shop-data';
-import product from '../../assets/bose-headset.png';
+import { useAppDispatch } from '../../redux/hooks';
+import { addItem } from '../../redux/cart/cart.reducer';
 
 const ProductCard = ({ item }: { item: IProduct }) => {
-  const { name, discount, price } = item;
+  const { name, img, discount, price } = item;
+  const dispatch = useAppDispatch();
+
   return (
     <CardContainerSm>
       <CardImgSm>
-        <img src={product} alt="product image" />
-        <div>
+        <img src={img} alt="product image" />
+        <div onClick={() => dispatch(addItem(item))}>
           <Heart />
           Add to cart
         </div>
