@@ -16,11 +16,13 @@ const ProductCard = ({ item }: { item: IProduct }) => {
   const { name, img, discount, price } = item;
   const dispatch = useAppDispatch();
 
+  const discountPrice = getDiscount(discount, price);
+
   return (
     <CardContainerSm>
       <CardImgSm>
         <img src={img} alt="product image" />
-        <div onClick={() => dispatch(addItem(item))}>
+        <div onClick={() => dispatch(addItem({ ...item, price: discountPrice }))}>
           <Heart />
           Add to cart
         </div>
@@ -29,7 +31,7 @@ const ProductCard = ({ item }: { item: IProduct }) => {
         <p>{name}</p>
         <CardPriceContainer>
           <CardPriceSm>
-            <h6>$ {getDiscount(discount, price)}</h6>
+            <h6>$ {discountPrice}</h6>
             <span>{price}</span>
           </CardPriceSm>
         </CardPriceContainer>
