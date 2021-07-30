@@ -1,8 +1,9 @@
-import { createSlice } from '@reduxjs/toolkit';
+import { createSlice, PayloadAction } from '@reduxjs/toolkit';
 import { IProduct } from '../shop/shop-data';
 import { RootState } from '../store';
+import { addItemToCart, removeItemFromCart } from './cart.utils';
 
-interface ICartItem extends IProduct {
+export interface ICartItem extends IProduct {
   quantity: number;
 }
 export interface ICart {
@@ -22,10 +23,19 @@ export const cartSlice = createSlice({
     toggleCartHidden: (state) => {
       state.hidden = !state.hidden;
     },
+    addItem: (state, action: PayloadAction<IProduct>) => {
+      state.cartItems = addItemToCart(state.cartItems, action.payload);
+    },
+
+    removeItem: (state, action: PayloadAction<IProduct>) => {
+      state.cartItems = removeItemFromCart(state.cartItems, action.payload);
+    },
   },
 });
 
 // * Selectors
+export const selectCartItems = (state: RootState) => state.cart.cartItems;
+
 export const selectCartItemsCount = (state: RootState) =>
   state.cart.cartItems.reduce((accumulatedQuantity, cartItem) => accumulatedQuantity + cartItem.quantity, 0);
 
@@ -35,7 +45,7 @@ export const selectCartTotal = (state: RootState) =>
     0,
   );
 // * Actions
-export const { toggleCartHidden } = cartSlice.actions;
+export const { toggleCartHidden, addItem } = cartSlice.actions;
 
 // * Reducer
 export default cartSlice.reducer;
