@@ -4,7 +4,9 @@ import { useAppSelector } from '../../redux/hooks';
 import { selectDiscountShopItems, selectShopCategories } from '../../redux/shop/shop.reducer';
 
 const CardLgGrid = () => {
-  const [{ title }] = useAppSelector(selectShopCategories);
+  const {
+    misc: { title },
+  } = useAppSelector(selectShopCategories);
   const products = useAppSelector(selectDiscountShopItems);
 
   return (
