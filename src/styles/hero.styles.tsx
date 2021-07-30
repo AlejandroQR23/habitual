@@ -13,6 +13,12 @@ export const HeroContainer = styled.div`
   }
 `;
 
+export const CategoryHeroContainer = styled(HeroContainer)`
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+`;
+
 export const HeroTextContainer = styled.div`
   max-width: 571px;
   width: 60%;
