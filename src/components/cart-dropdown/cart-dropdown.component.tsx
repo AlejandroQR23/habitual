@@ -1,14 +1,20 @@
 import { RouteComponentProps, withRouter } from 'react-router-dom';
-import { toggleCartHidden } from '../../redux/cart/cart.reducer';
-import { useAppDispatch } from '../../redux/hooks';
+import { selectCartItems, toggleCartHidden } from '../../redux/cart/cart.reducer';
+import { useAppDispatch, useAppSelector } from '../../redux/hooks';
+import CartItem from '../cart-item/cart-item.component';
 import { CartDropdownContainer, CartItemsContainer, EmptyMessage } from './cart-dropdown.styles';
 
 const CartDropdown = ({ history }: RouteComponentProps) => {
+  const cartItems = useAppSelector(selectCartItems);
   const dispatch = useAppDispatch();
   return (
     <CartDropdownContainer>
       <CartItemsContainer>
-        <EmptyMessage>Your cart is empty</EmptyMessage>
+        {cartItems.length ? (
+          cartItems.map((item) => <CartItem key={item.id} item={item} />)
+        ) : (
+          <EmptyMessage>Your cart is empty</EmptyMessage>
+        )}
       </CartItemsContainer>
       <button
         onClick={() => {
