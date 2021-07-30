@@ -1,6 +1,5 @@
 import { ButtonContainer, ColorCardContainer, ColorCardImg } from '../../styles/color-card.styles';
 import { ReactComponent as RightArrow } from '../../assets/chevron-right.svg';
-import product from '../../assets/bose-headset.png';
 import { ICategory } from '../../redux/directory/directory.reducer';
 import { RouteComponentProps, withRouter } from 'react-router-dom';
 
@@ -11,7 +10,7 @@ const CategoryCard = ({ title, color, img, linkUrl, history, match }: ICategoryC
     <ColorCardContainer color={color}>
       <p>{title}</p>
       <ColorCardImg>
-        <img src={product} alt={img} />
+        <img src={img} alt="category" />
       </ColorCardImg>
       <ButtonContainer onClick={() => history.push(`${match.url}${linkUrl}`)}>
         <RightArrow />
