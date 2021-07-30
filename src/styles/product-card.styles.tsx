@@ -18,6 +18,7 @@ export const CardImg = styled.div`
   width: 100%;
   height: 160px;
   text-align: center;
+
   background: #f8f7fa;
 
   div {
@@ -36,10 +37,9 @@ export const CardImg = styled.div`
     svg {
       margin-right: 4px;
     }
-  }
-
-  img {
-    max-height: 128px;
+    img {
+      max-height: 128px;
+    }
   }
 
   &:hover {
@@ -128,6 +128,9 @@ export const CardBodySm = styled(CardBody)`
 export const CardImgSm = styled(CardImg)`
   height: 137px;
 
+  img {
+    max-width: 128px;
+  }
   div {
     right: 35px;
   }
