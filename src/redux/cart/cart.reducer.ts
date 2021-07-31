@@ -30,6 +30,9 @@ export const cartSlice = createSlice({
     removeItem: (state, action: PayloadAction<IProduct>) => {
       state.cartItems = removeItemFromCart(state.cartItems, action.payload);
     },
+    clearItem: (state, action: PayloadAction<IProduct>) => {
+      state.cartItems = state.cartItems.filter((item) => item.id !== action.payload.id);
+    },
   },
 });
 
@@ -45,7 +48,7 @@ export const selectCartTotal = (state: RootState) =>
     0,
   );
 // * Actions
-export const { toggleCartHidden, addItem } = cartSlice.actions;
+export const { toggleCartHidden, addItem, removeItem, clearItem } = cartSlice.actions;
 
 // * Reducer
 export default cartSlice.reducer;
