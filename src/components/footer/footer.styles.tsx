@@ -8,6 +8,14 @@ export const FooterContainer = styled.footer`
   justify-content: space-around;
   align-items: center;
   background-color: #fff9cc;
+
+  @media screen and (max-width: 580px) {
+    flex-direction: column;
+
+    svg {
+      margin-top: 16px;
+    }
+  }
 `;
 
 export const CopyrigthContainer = styled.div`

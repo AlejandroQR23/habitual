@@ -7,6 +7,7 @@ export const ColorCardContainer = styled.div`
   border-radius: 10px;
   width: 156px;
   min-height: 156px;
+  margin-bottom: 16px;
 
   p {
     margin: 0;

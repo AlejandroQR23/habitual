@@ -10,7 +10,7 @@ export const GlobalStyle = createGlobalStyle`
     font-family: 'Lato', sans-serif;
     
 
-    @media screen and (max-width: 900px) {
+    @media screen and (max-width: 1040px) {
       text-align: center;
     }
   }
