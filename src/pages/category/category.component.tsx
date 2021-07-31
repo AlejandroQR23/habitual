@@ -17,7 +17,7 @@ const CategoryPage = ({ match }: RouteComponentProps<IMatchParams>) => {
       <h2>{category.title}</h2>
       <CardGridContainer>
         {category.products.map((item) => (
-          <ProductCardLg item={item} category={category.title} />
+          <ProductCardLg key={item.id} item={item} category={category.title} />
         ))}
       </CardGridContainer>
       <CategoryHero />
