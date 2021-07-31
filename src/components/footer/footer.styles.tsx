@@ -30,4 +30,12 @@ export const CopyrigthContainer = styled.div`
   a {
     text-decoration: underline;
   }
+
+  @media screen and (max-width: 580px) {
+    p,
+    a {
+      font-size: 12px;
+      line-height: 20px;
+    }
+  }
 `;
