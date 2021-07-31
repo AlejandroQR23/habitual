@@ -19,4 +19,8 @@ export const ItemCount = styled.div`
   font-weight: bold;
   right: 6px;
   font-size: 14px;
+
+  @media screen and (max-width: 580px) {
+    font-size: 10px;
+  }
 `;
