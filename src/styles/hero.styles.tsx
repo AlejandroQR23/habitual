@@ -40,4 +40,8 @@ export const CategoryHeroContainer = styled(HeroContainer)`
   text-align: center;
 
   margin: 48px auto 0;
+
+  svg {
+    max-width: 100%;
+  }
 `;
