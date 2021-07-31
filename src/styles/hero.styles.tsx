@@ -8,7 +8,7 @@ export const HeroContainer = styled.div`
   justify-content: space-between;
   align-items: center;
 
-  @media screen and (max-width: 900px) {
+  @media screen and (max-width: 1040px) {
     justify-content: center;
   }
 `;
@@ -23,7 +23,7 @@ export const HeroTextContainer = styled.div`
   max-width: 571px;
   width: 60%;
 
-  @media screen and (max-width: 900px) {
+  @media screen and (max-width: 1040px) {
     margin-bottom: 32px;
   }
 `;
