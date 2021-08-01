@@ -122,4 +122,17 @@ export const GlobalStyle = createGlobalStyle`
       opacity: 1;
     }
   }
+
+  @keyframes slide-in-bottom {
+    0% {
+      transform: translateY(1000px);
+      opacity: 0;
+    }
+    100% {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+
+
 `;
