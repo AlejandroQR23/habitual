@@ -13,6 +13,10 @@ export const CartDropdownContainer = styled.div`
   right: 100px;
   z-index: 5;
 
+  @media screen and (max-width: 840px) {
+    right: 20px;
+  }
+
   animation: swing-in-top-fwd 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275) both;
 
   button {
