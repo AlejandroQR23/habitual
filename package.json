@@ -1,7 +1,7 @@
 {
   "name": "habitual",
-  "version": "1.0.0",
-  "homepage": "https://alejandroqr23.github.io/habitual",
+  "version": "1.0.1",
+  "homepage": "https://alejandroqr23.github.io/habitual/",
   "private": true,
   "dependencies": {
     "@reduxjs/toolkit": "^1.6.1",
