@@ -31,6 +31,10 @@ export const CardImg = styled.div`
     top: 55px;
     right: 100px;
     display: none;
+    padding: 8px;
+    opacity: 0.85;
+    box-shadow: 5px 5px 15px 5px rgba(0, 0, 0, 0.05);
+    cursor: pointer;
 
     font-size: 10px;
 
@@ -40,6 +44,12 @@ export const CardImg = styled.div`
     img {
       max-height: 128px;
     }
+
+    @media screen and (max-width: 840px) {
+      display: flex;
+      flex-direction: row;
+      align-items: flex-start;
+    }
   }
 
   &:hover {
@@ -47,14 +57,9 @@ export const CardImg = styled.div`
       opacity: 0.8;
     }
     div {
-      opacity: 0.85;
       display: flex;
       flex-direction: row;
       align-items: flex-start;
-      padding: 8px;
-
-      cursor: pointer;
-      box-shadow: 5px 5px 15px 5px rgba(0, 0, 0, 0.05);
     }
   }
 `;
