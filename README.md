@@ -1,4 +1,4 @@
-# Project Title
+# Habitual
 
 Habitual is an ecommerce cretaed for a fake brand called Habitual. It was built using React and Typescript.
 
